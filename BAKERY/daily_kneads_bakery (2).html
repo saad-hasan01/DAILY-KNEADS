@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Kneads - Fresh Baked Goods Daily</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">🥖 DAILY KNEADS</div>
+            <nav>
+                <ul>
+                    <li><a onclick="showPage('home')">Home</a></li>
+                    <li><a onclick="showPage('pizzas')">Pizzas</a></li>
+                    <li><a onclick="showPage('cakes')">Cakes</a></li>
+                    <li><a onclick="showPage('breads')">Breads</a></li>
+                    <li><a onclick="showPage('pastries')">Pastries</a></li>
+                    <li><a onclick="showPage('cookies')">Cookies</a></li>
+                    <li><a onclick="showPage('sandwiches')">Sandwiches</a></li>
+                    <li><a onclick="showPage('about')">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HOME PAGE -->
+    <div id="home" class="page-section active">
+        <div class="hero">
+            <div class="hero-content">
+                <h1>Welcome to Daily Kneads</h1>
+                <p>Freshly Baked with Love, Every Single Day</p>
+            </div>
+        </div>
+        <div class="container">
+            <h2 class="section-title">Our Specialties</h2>
+            <p class="section-subtitle">Explore our delicious categories</p>
+            <div class="category-grid">
+                <div class="category-card" onclick="showPage('pizzas')">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400&h=300&fit=crop');"></div>
+                    <div class="card-content">
+                        <h3>Artisan Pizzas</h3>
+                        <p>Hand-tossed dough with fresh toppings</p>
+                    </div>
+                </div>
+                <div class="category-card" onclick="showPage('cakes')">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&h=300&fit=crop');"></div>
+                    <div class="card-content">
+                        <h3>Custom Cakes</h3>
+                        <p>Perfect for every celebration</p>
+                    </div>
+                </div>
+                <div class="category-card" onclick="showPage('breads')">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1549931319-a545dcf3bc73?w=400&h=300&fit=crop');"></div>
+                    <div class="card-content">
+                        <h3>Fresh Breads</h3>
+                        <p>Baked fresh every morning</p>
+                    </div>
+                </div>
+                <div class="category-card" onclick="showPage('pastries')">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=400&h=300&fit=crop');"></div>
+                    <div class="card-content">
+                        <h3>Pastries & More</h3>
+                        <p>Flaky, buttery, irresistible</p>
+                    </div>
+                </div>
+                <div class="category-card" onclick="showPage('cookies')">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=400&h=300&fit=crop');"></div>
+                    <div class="card-content">
+                        <h3>Fresh Cookies</h3>
+                        <p>Chewy, crispy, absolutely delicious</p>
+                    </div>
+                </div>
+                <div class="category-card" onclick="showPage('sandwiches')">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=400&h=300&fit=crop');"></div>
+                    <div class="card-content">
+                        <h3>Gourmet Sandwiches</h3>
+                        <p>Made with our fresh-baked bread</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PIZZAS PAGE -->
+    <div id="pizzas" class="page-section">
+        <div class="container">
+            <h2 class="section-title">Artisan Pizzas</h2>
+            <p class="section-subtitle">Made with our signature sourdough crust</p>
+            <div class="category-grid">
+                <div class="category-card"
+                onclick="showProduct(
+                    'Margherita Classic',
+                    'Fresh mozzarella, basil, tomato sauce',
+                    'Rs.2000',
+                    'https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400&h=300&fit=crop'
+                )">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400&h=300&fit=crop');"></div>
+                    <div class="card-content">
+                        <h3>Margherita Classic</h3>
+                        <p>Fresh mozzarella, basil, tomato sauce</p>
+                        <div class="price">Rs.2000</div>
+                    </div>
+                </div>
+                <div class="category-card"
+                onclick="showProduct(
+                    'Pepperoni Delight',
+                    'Premium pepperoni, mozzarella, herbs',
+                    'Rs.2000',
+                    'https://images.unsplash.com/photo-1628840042765-356cda07504e?w=400&h=300&fit=crop'
+                )">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1628840042765-356cda07504e?w=400&h=300&fit=crop');"></div>
+                    <div class="card-content">
+                        <h3>Pepperoni Delight</h3>
+                        <p>Premium pepperoni, mozzarella, herbs</p>
+                        <div class="price">Rs.2000</div>
+                    </div>
+                </div>
+                <div class="category-card"
+                onclick="showProduct(
+                    'Veggie Supreme',
+                    'Bell peppers, olives, mushrooms, onions',
+                    'Rs.2000',
+                    'https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?w=400&h=300&fit=crop'
+                )">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?w=400&h=300&fit=crop');"></div>
+                    <div class="card-content">
+                        <h3>Veggie Supreme</h3>
+                        <p>Bell peppers, olives, mushrooms, onions</p>
+                        <div class="price">Rs.2000</div>
+                    </div>
+                </div>
+                <div class="category-card"
+                onclick="showProduct(
+                    'BBQ Chicken',
+                    'Grilled chicken, BBQ sauce, red onions',
+                    'Rs.2000',
+                    'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop'
+                )">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop');"></div>
+                    <div class="card-content">
+                        <h3>BBQ Chicken</h3>
+                        <p>Grilled chicken, BBQ sauce, red onions</p>
+                        <div class="price">Rs.2000</div>
+                    </div>
+                </div>
+                <div class="category-card"
+                onclick="showProduct(
+                    'Four Cheese',
+                    'Mozzarella, parmesan, gorgonzola, ricotta',
+                    'Rs.2000',
+                    'four-cheese-pizza.JPG'
+                )">
+                    <div class="card-image" style="background-image: url('four-cheese-pizza.JPG');"></div>
+                    <div class="card-content">
+                        <h3>Four Cheese</h3>
+                        <p>Mozzarella, parmesan, gorgonzola, ricotta</p>
+                        <div class="price">Rs.2000</div>
+                    </div>
+                </div>
+                <div class="category-card"
+                
+                onclick="showProduct(
+                    'Meat Lovers',
+                    'Pepperoni, sausage, bacon, ham',
+                    'Rs.2000',
+                    'meat-lovers-pizza.jpg'
+                )">
+                    <div class="card-image" style="background-image: url('meat-lovers-pizza.jpg');"></div>
+                    <div class="card-content">
+                        <h3>Meat Lovers</h3>
+                        <p>Pepperoni, sausage, bacon, ham</p>
+                        <div class="price">Rs.2000</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CAKES PAGE -->
+    <div id="cakes" class="page-section">
+        <div class="container">
+            <h2 class="section-title">Custom Cakes</h2>
+            <p class="section-subtitle">Made to order for your special occasions</p>
+            <div class="category-grid">
+                <div class="category-card"
+                 onclick="showProduct(
+                    'Chocolate Fudge',
+                    'Rich chocolate layers with fudge frosting',
+                    'Rs.3000',
+                    'https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&h=300&fit=crop'
+                )">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&h=300&fit=crop');"></div>
+                    <div class="card-content">
+                        <h3>Chocolate Fudge</h3>
+                        <p>Rich chocolate layers with fudge frosting</p>
+                        <div class="price">Rs.3000</div>
+                    </div>
+                </div>
+                <div class="category-card"
+                onclick="showProduct(
+                    'Red Velvet',
+                    'Classic red velvet with cream cheese',
+                    'Rs.3000',
+                    'RED-VELVET-CAKE.jpg'
+                )">
+                    <div class="card-image" style="background-image: url('RED-VELVET-CAKE.jpg');"></div>
+                    <div class="card-content">
+                        <h3>Red Velvet</h3>
+                        <p>Classic red velvet with cream cheese</p>
+                        <div class="price">Rs.3000</div>
+                    </div>
+                </div>
+                <div class="category-card"
+                onclick="showProduct(
+                    'Vanilla Bean',
+                    'Light and fluffy vanilla sponge cake',
+                    'Rs.3000',
+                    'vanilla-bean-cake.jpg'
+                )">
+                    <div class="card-image" style="background-image: url('vanilla-bean-cake.jpg');"></div>
+                    <div class="card-content">
+                        <h3>Vanilla Bean</h3>
+                        <p>Light and fluffy vanilla sponge cake</p>
+                        <div class="price">Rs.3000</div>
+                    </div>
+                </div>
+                <div class="category-card"
+                onclick="showProduct(
+                    'Carrot Cake',
+                    'Moist carrot cake with walnuts',
+                    'Rs.3000',
+                    'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=400&h=300&fit=crop'
+                )">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=400&h=300&fit=crop');"></div>
+                    <div class="card-content">
+                        <h3>Carrot Cake</h3>
+                        <p>Moist carrot cake with walnuts</p>
+                        <div class="price">Rs.3000</div>
+                    </div>
+                </div>
+                <div class="category-card"
+                onclick="showProduct(
+                    'Strawberry Shortcake',
+                    'Fresh strawberries and whipped cream',
+                    'Rs.3000',
+                    'https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=400&h=300&fit=crop'
+                )">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=400&h=300&fit=crop');"></div>
+                    <div class="card-content">
+                        <h3>Strawberry Shortcake</h3>
+                        <p>Fresh strawberries and whipped cream</p>
+                        <div class="price">Rs.3000</div>
+                    </div>
+                </div>
+                <div class="category-card"
+                onclick="showProduct(
+                    'Black Forest',
+                    'Chocolate, cherries, and cream',
+                    'Rs.3000',
+                    'black-forest-cake.jfif'
+                )">
+                    <div class="card-image" style="background-image: url('black-forest-cake.jfif');"></div>
+                    <div class="card-content">
+                        <h3>Black Forest</h3>
+                        <p>Chocolate, cherries, and cream</p>
+                        <div class="price">Rs.3000</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BREADS PAGE -->
+    <div id="breads" class="page-section">
+        <div class="container">
+            <h2 class="section-title">Fresh Breads</h2>
+            <p class="section-subtitle">Baked fresh every morning</p>
+            <div class="category-grid">
+                <div class="category-card"
+                onclick="showProduct(
+                    'Sourdough Loaf',
+                    'Traditional sourdough with crispy crust',
+                    'Rs.2000',
+                    'https://images.unsplash.com/photo-1549931319-a545dcf3bc73?w=400&h=300&fit=crop'
+                )">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1549931319-a545dcf3bc73?w=400&h=300&fit=crop');"></div>
+                    <div class="card-content">
+                        <h3>Sourdough Loaf</h3>
+                        <p>Traditional sourdough with crispy crust</p>
+                        <div class="price">Rs.2000</div>
+                    </div>
+                </div>
+                <div class="category-card"
+                onclick="showProduct(
+                    'French Baguette',
+                    'Classic French baguette',
+                    'Rs.2000',
+                    'https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400&h=300&fit=crop'
+                )">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400&h=300&fit=crop');"></div>
+                    <div class="card-content">
+                        <h3>French Baguette</h3>
+                        <p>Classic French baguette</p>
+                        <div class="price">Rs.2000</div>
+                    </div>
+                </div>
+                <div class="category-card"
+                onclick="showProduct(
+                    'Whole Wheat',
+                    'Nutritious whole grain bread',
+                    'Rs.2000',
+                    'https://images.unsplash.com/photo-1589367920969-ab8e050bbb04?w=400&h=300&fit=crop'
+                )">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1589367920969-ab8e050bbb04?w=400&h=300&fit=crop');"></div>
+                    <div class="card-content">
+                        <h3>Whole Wheat</h3>
+                        <p>Nutritious whole grain bread</p>
+                        <div class="price">Rs.2000</div>
+                    </div>
+                </div>
+                <div class="category-card"
+                onclick="showProduct(
+                    'Multigrain',
+                    'Packed with seeds and grains',
+                    'Rs.2000',
+                    'https://images.unsplash.com/photo-1598373182133-52452f7691ef?w=400&h=300&fit=crop'
+                )">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1598373182133-52452f7691ef?w=400&h=300&fit=crop');"></div>
+                    <div class="card-content">
+                        <h3>Multigrain</h3>
+                        <p>Packed with seeds and grains</p>
+                        <div class="price">Rs.2000</div>
+                    </div>
+                </div>
+                <div class="category-card"
+                onclick="showProduct(
+                    'Rye Bread',
+                    'Dark rye with caraway seeds',
+                    'Rs.2000',
+                    'https://images.unsplash.com/photo-1608198093002-ad4e005484ec?w=400&h=300&fit=crop'
+                )">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1608198093002-ad4e005484ec?w=400&h=300&fit=crop');"></div>
+                    <div class="card-content">
+                        <h3>Rye Bread</h3>
+                        <p>Dark rye with caraway seeds</p>
+                        <div class="price">Rs.2000</div>
+                    </div>
+                </div>
+                <div class="category-card"
+                onclick="showProduct(
+                    'Ciabatta',
+                    'Italian-style rustic bread',
+                    'Rs.2000',
+                    'https://images.unsplash.com/photo-1586444248902-2f64eddc13df?w=400&h=300&fit=crop'
+                )">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1586444248902-2f64eddc13df?w=400&h=300&fit=crop');"></div>
+                    <div class="card-content">
+                        <h3>Ciabatta</h3>
+                        <p>Italian-style rustic bread</p>
+                        <div class="price">Rs.2000</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <!-- PASTRIES PAGE -->
+    <div id="pastries" class="page-section">
+        <div class="container">
+            <h2 class="section-title">Pastries & More</h2>
+            <p class="section-subtitle">Flaky, buttery, and absolutely delicious</p>
+            <div class="category-grid">
+                <div class="category-card"
+                onclick="showProduct(
+                    'Butter Croissant',
+                    'Classic French butter croissant',
+                    'Rs.1500',
+                    'https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=400&h=300&fit=crop'
+                )">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=400&h=300&fit=crop');"></div>
+                    <div class="card-content">
+                        <h3>Butter Croissant</h3>
+                        <p>Classic French butter croissant</p>
+                        <div class="price">Rs.1500</div>
+                    </div>
+                </div>
+                <div class="category-card"
+                onclick="showProduct(
+                    'Chocolate Croissant',
+                    'Pain au chocolat with dark chocolate',
+                    'Rs.1500',
+                    'Chocolate-Almond-Croissants.jpg'
+                )">
+                    <div class="card-image" style="background-image: url('Chocolate-Almond-Croissants.jpg');"></div>
+                    <div class="card-content">
+                        <h3>Chocolate Croissant</h3>
+                        <p>Pain au chocolat with dark chocolate</p>
+                        <div class="price">Rs.1500</div>
+                    </div>
+                </div>
+                <div class="category-card"
+                onclick="showProduct(
+                    'Blueberry Muffin',
+                    'Loaded with fresh blueberries',
+                    'Rs.1500',
+                    'https://images.unsplash.com/photo-1607958996333-41aef7caefaa?w=400&h=300&fit=crop'
+                )">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1607958996333-41aef7caefaa?w=400&h=300&fit=crop');"></div>
+                    <div class="card-content">
+                        <h3>Blueberry Muffin</h3>
+                        <p>Loaded with fresh blueberries</p>
+                        <div class="price">Rs.1500</div>
+                    </div>
+                </div>
+                <div class="category-card"
+                onclick="showProduct(
+                    'Almond Danish',
+                    'Flaky pastry with almond filling',
+                    'Rs.1500',
+                    'Almond-danish.jpg'
+                )">
+                    <div class="card-image" style="background-image: url('Almond-danish.jpg');"></div>
+                    <div class="card-content">
+                        <h3>Almond Danish</h3>
+                        <p>Flaky pastry with almond filling</p>
+                        <div class="price">Rs.1500</div>
+                    </div>
+                </div>
+                <div class="category-card"
+                onclick="showProduct(
+                    'Cinnamon Roll',
+                    'Warm cinnamon roll with icing',
+                    'Rs.1500',
+                    'cinnrolls.jpg'
+                )">
+                    <div class="card-image" style="background-image: url('cinnrolls.jpg');"></div>
+                    <div class="card-content">
+                        <h3>Cinnamon Roll</h3>
+                        <p>Warm cinnamon roll with icing</p>
+                        <div class="price">Rs.1500</div>
+                    </div>
+                </div>
+                <div class="category-card"
+                onclick="showProduct(
+                    'Apple Turnover',
+                    'Puff pastry with spiced apples',
+                    'Rs.1500',
+                    'apple-turnovers.jpg'
+                )">
+                    <div class="card-image" style="background-image: url('apple-turnovers.jpg');"></div>
+                    <div class="card-content">
+                        <h3>Apple Turnover</h3>
+                        <p>Puff pastry with spiced apples</p>
+                        <div class="price">Rs.1500</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- COOKIES PAGE -->
+    <div id="cookies" class="page-section">
+        <div class="container">
+            <h2 class="section-title">Fresh Cookies</h2>
+            <p class="section-subtitle">Baked fresh throughout the day</p>
+            <div class="category-grid">
+                <div class="category-card"
+                onclick="showProduct(
+                    'Chocolate Chip',
+                    'Classic chocolate chip cookies',
+                    'Rs.1500',
+                    'https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=400&h=300&fit=crop'
+                )">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=400&h=300&fit=crop');"></div>
+                    <div class="card-content">
+                        <h3>Chocolate Chip</h3>
+                        <p>Classic chocolate chip cookies</p>
+                        <div class="price">Rs.1500</div>
+                    </div>
+                </div>
+                <div class="category-card"
+                onclick="showProduct(
+                    'Oatmeal Raisin',
+                    'Chewy oatmeal with plump raisins',
+                    'Rs.1500',
+                    'oatmeal-raisin-cookies.jpg'
+                )">
+                    <div class="card-image" style="background-image: url('oatmeal-raisin-cookies.jpg');"></div>
+                    <div class="card-content">
+                        <h3>Oatmeal Raisin</h3>
+                        <p>Chewy oatmeal with plump raisins</p>
+                        <div class="price">Rs.1500</div>
+                    </div>
+                </div>
+                <div class="category-card"
+                onclick="showProduct(
+                    'Double Chocolate',
+                    'Rich chocolate cookies with chocolate chips',
+                    'Rs.1500',
+                    'Double-chocolate-chip-cookie.jpg'
+                )">
+                    <div class="card-image" style="background-image: url('Double-chocolate-chip-cookie.jpg');"></div>
+                    <div class="card-content">
+                        <h3>Double Chocolate</h3>
+                        <p>Rich chocolate cookies with chocolate chips</p>
+                        <div class="price">Rs.1500</div>
+                    </div>
+                </div>
+                <div class="category-card"
+                onclick="showProduct(
+                    'Peanut Butter',
+                    'Soft and chewy peanut butter cookies',
+                    'Rs.1500',
+                    'https://images.unsplash.com/photo-1548365328-8c6db3220e4c?w=400&h=300&fit=crop'
+                )">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1548365328-8c6db3220e4c?w=400&h=300&fit=crop');"></div>
+                    <div class="card-content">
+                        <h3>Peanut Butter</h3>
+                        <p>Soft and chewy peanut butter cookies</p>
+                        <div class="price">Rs.1500</div>
+                    </div>
+                </div>
+                <div class="category-card"
+                onclick="showProduct(
+                    'Sugar Cookies',
+                    'Decorated sugar cookies for every occasion',
+                    'Rs.1500',
+                    'Chewy-Sugar-Cookie-.jpg'
+                )">
+                    <div class="card-image" style="background-image: url('Chewy-Sugar-Cookie-.jpg');"></div>
+                    <div class="card-content">
+                        <h3>Sugar Cookies</h3>
+                        <p>Decorated sugar cookies for every occasion</p>
+                        <div class="price">Rs.1500</div>
+                    </div>
+                </div>
+                <div class="category-card"
+                onclick="showProduct(
+                    'White Chocolate Macadamia',
+                    'Premium white chocolate and macadamia nuts',
+                    'Rs.1500',
+                    'white choclate macadamia.jfif'
+                )">
+                    <div class="card-image" style="background-image: url('white choclate macadamia.jfif');"></div>
+                    <div class="card-content">
+                        <h3>White Chocolate Macadamia</h3>
+                        <p>Premium white chocolate and macadamia nuts</p>
+                        <div class="price">Rs.1500</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SANDWICHES PAGE -->
+    <div id="sandwiches" class="page-section">
+        <div class="container">
+            <h2 class="section-title">Gourmet Sandwiches</h2>
+            <p class="section-subtitle">Made fresh daily with our artisan breads</p>
+            <div class="category-grid">
+                <div class="category-card"
+                onclick="showProduct(
+                    'Turkey Club',
+                    'Roasted turkey, bacon, lettuce, tomato',
+                    'Rs.1500',
+                    'https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=400&h=300&fit=crop'
+                )">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=400&h=300&fit=crop');"></div>
+                    <div class="card-content">
+                        <h3>Turkey Club</h3>
+                        <p>Roasted turkey, bacon, lettuce, tomato</p>
+                        <div class="price">Rs.1500</div>
+                    </div>
+                </div>
+                <div class="category-card"
+                onclick="showProduct(
+                    'Italian Sub',
+                    'Ham, salami, provolone, Italian dressing',
+                    'Rs.1500',
+                    'https://images.unsplash.com/photo-1619096252214-ef06c45683e3?w=400&h=300&fit=crop'
+                )">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1619096252214-ef06c45683e3?w=400&h=300&fit=crop');"></div>
+                    <div class="card-content">
+                        <h3>Italian Sub</h3>
+                        <p>Ham, salami, provolone, Italian dressing</p>
+                        <div class="price">Rs.1500</div>
+                    </div>
+                </div>
+                <div class="category-card"
+                onclick="showProduct(
+                    'Grilled Chicken',
+                    'Marinated chicken breast with veggies',
+                    'Rs.1500',
+                    'Chicken-Grilled-sandwich.jpg'
+                )">
+                    <div class="card-image" style="background-image: url('Chicken-Grilled-sandwich.jpg');"></div>
+                    <div class="card-content">
+                        <h3>Grilled Chicken</h3>
+                        <p>Marinated chicken breast with veggies</p>
+                        <div class="price">Rs.1500</div>
+                    </div>
+                </div>
+                <div class="category-card"
+                onclick="showProduct(
+                    'Veggie Delight',
+                    'Fresh vegetables, hummus, avocado',
+                    'Rs.1500',
+                    'Garlic-Bread.webp'
+                )">
+                    <div class="card-image" style="background-image: url('Garlic-Bread.webp');"></div>
+                    <div class="card-content">
+                        <h3>Garlic Bread</h3>
+                        <p>Fresh read with galic oil</p>
+                        <div class="price">Rs.1500</div>
+                    </div>
+                </div>
+                <div class="category-card"
+                onclick="showProduct(
+                    'Tuna Melts',
+                    'Tuna salad with melted cheese on rye',
+                    'Rs.1500',
+                    'Tuna-Melts-sandwich.jpg'
+                )">
+                    <div class="card-image" style="background-image: url('Tuna-Melts-sandwich.jpg');"></div>
+                    <div class="card-content">
+                        <h3>Tuna Melt</h3>
+                        <p>Tuna salad with melted cheese on rye</p>
+                        <div class="price">Rs.1500</div>
+                    </div>
+                </div>
+                <div class="category-card"
+                onclick="showProduct(
+                    'Philly Cheesesteak',
+                    'Sliced beef, peppers, onions, cheese',
+                    'Rs.1500',
+                    'https://images.unsplash.com/photo-1509722747041-616f39b57569?w=400&h=300&fit=crop'
+                )">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1509722747041-616f39b57569?w=400&h=300&fit=crop');"></div>
+                    <div class="card-content">
+                        <h3>Philly Cheesesteak</h3>
+                        <p>Sliced beef, peppers, onions, cheese</p>
+                        <div class="price">Rs.1500</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- ABOUT PAGE -->
+    <div id="about" class="page-section">
+        <div class="container">
+            <h2 class="section-title">About Daily Kneads</h2>
+            <div class="about-content">
+                <p>Welcome to Daily Kneads, where passion meets tradition in every bite. Since our founding, we've been committed to bringing you the finest baked goods, made fresh daily with love and the highest quality ingredients.</p>
+                
+                <p>Our journey began with a simple mission: to create a bakery that feels like home. A place where the aroma of fresh bread greets you at the door, where every cake is crafted with care, and where our artisan pizzas bring families together around the table.</p>
+                
+                <p>We believe in the art of traditional baking, using time-honored techniques passed down through generations. Our bakers arrive before dawn to ensure that every loaf, every pastry, and every pizza crust is made fresh for you.</p>
+                
+                <p>Thank you for choosing Daily Kneads. We're not just a bakery – we're your neighborhood gathering place, where good food and warm smiles are always on the menu.</p>
+            </div>
+        </div>
+    </div>
+    <div id="productModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+
+        <img id="modalImage" src="" alt="">
+        <h2 id="modalTitle"></h2>
+        <p id="modalDescription"></p>
+        <h3 id="modalPrice"></h3>
+
+        <button onclick="placeOrder()">Order Now</button>
+
+        <p id="orderMessage" class="success-message"></p>
+    </div>
+</div>
+
+
+    <footer>
+        <div class="logo" style="font-size: 1.5rem; margin-bottom: 1rem;">🥖 DAILY KNEADS</div>
+        <div class="contact-info">
+            <p>📍 Iqbal Street,Attock City</p>
+            <p>📞 +923060838129</p>
+            <p>📧 dailykneads@gmail.com</p>
+            <p style="margin-top: 1rem;">Open Daily: 6:00 AM - 8:00 PM</p>
+        </div>
+        <p style="margin-top: 1.5rem;">Love at First Bite</p>
+    </footer>
+
+    <script>
+        function showPage(pageId) {
+            var sections = document.getElementsByClassName('page-section');
+            for (var i = 0; i < sections.length; i++) {
+                sections[i].classList.remove('active');
+            }
+            document.getElementById(pageId).classList.add('active');
+            window.scrollTo(0, 0);
+        }
+    </script>
+    <script>
+function showProduct(title, description, price, image) {
+    document.getElementById("modalTitle").innerText = title;
+    document.getElementById("modalDescription").innerText = description;
+    document.getElementById("modalPrice").innerText = price;
+    document.getElementById("modalImage").src = image;
+
+    document.getElementById("orderMessage").innerText = "";
+    document.getElementById("productModal").style.display = "flex";
+}
+
+function closeModal() {
+    document.getElementById("productModal").style.display = "none";
+}
+
+function placeOrder() {
+    document.getElementById("orderMessage").innerText =
+        "🎉 Order Successful! Thank you for ordering.";
+}
+</script>
+
+    
+</body>
+</html>
